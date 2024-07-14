@@ -1,0 +1,23 @@
+Jul 14, 2024 3:27:34 PM hudson.remoting.Launcher$CuiListener status
+INFO: Locating server among [http://jenkins:8080/]
+Jul 14, 2024 3:27:34 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+Jul 14, 2024 3:27:34 PM hudson.remoting.Launcher$CuiListener status
+INFO: Agent discovery successful
+  Agent address: jenkins
+  Agent port:    50000
+  Identity:      b0:e6:69:c2:2c:7a:9b:fb:08:03:20:e7:e3:81:d5:49
+Jul 14, 2024 3:27:34 PM hudson.remoting.Launcher$CuiListener status
+INFO: Handshaking
+Jul 14, 2024 3:27:34 PM hudson.remoting.Launcher$CuiListener status
+INFO: Connecting to jenkins:50000
+Jul 14, 2024 3:27:34 PM hudson.remoting.Launcher$CuiListener status
+INFO: Server reports protocol JNLP4-connect-proxy not supported, skipping
+Jul 14, 2024 3:27:34 PM hudson.remoting.Launcher$CuiListener status
+INFO: Trying protocol: JNLP4-connect
+Jul 14, 2024 3:27:34 PM org.jenkinsci.remoting.protocol.impl.BIONetworkLayer$Reader run
+INFO: Waiting for ProtocolStack to start.
+Jul 14, 2024 3:27:34 PM hudson.remoting.Launcher$CuiListener status
+INFO: Remote identity confirmed: b0:e6:69:c2:2c:7a:9b:fb:08:03:20:e7:e3:81:d5:49
+Jul 14, 2024 3:27:35 PM hudson.remoting.Launcher$CuiListener status
+INFO: Connected
