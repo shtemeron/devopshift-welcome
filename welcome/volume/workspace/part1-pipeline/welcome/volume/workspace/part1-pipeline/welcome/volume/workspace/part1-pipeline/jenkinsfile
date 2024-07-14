@@ -15,7 +15,7 @@ pipeline {
                 //Build the Docker image for the build stage
                    //sh 'pwd'
                    //sh 'cd repo/welcome/app/bookinfo/src/productpage'
-                   sh "docker build --target build --tag ${IMAGE_NAME}:${VERSION} welcome/app/bookinfo/src/productpage"
+                   sh "docker build --tag ${IMAGE_NAME}:${VERSION} welcome/app/bookinfo/src/productpage"
             }
         }
     }    
