@@ -19,16 +19,18 @@ pipeline {
             }
         }
         //stage('Test') {
-          //  steps {
+           // steps {
             //       sh "docker build --tag ${IMAGE_NAME}:${VERSION}-test welcome/app/bookinfo/src/productpage"
-              //     sh "docker run --rm ${IMAGE_NAME}:${VERSION}-test"
-            //}
-        //}
+           //        sh "docker run --rm ${IMAGE_NAME}:${VERSION}-test"
+         //   }
+      //  }
         stage('Push') {
             steps {
-                   docker.withRegistry('https://index.docker.io/v1/',"${CREDENTIALS_ID}"){
+                scripts {
+                    docker.withRegistry('https://index.docker.io/v1/',"${CREDENTIALS_ID}"){
                        sh "dockerpush${REPO}/${IMAGE_NAME}:${VERSION}"
                    }
+                }   
             }  
         }    
     }
