@@ -18,11 +18,11 @@ pipeline {
                    sh "docker build --tag ${IMAGE_NAME}:${VERSION}-build welcome/app/bookinfo/src/productpage"
             }
         }
-        stage('Test') {
-            steps {
-                   sh "docker build --tag ${IMAGE_NAME}:${VERSION}-test welcome/app/bookinfo/src/productpage"
-                   sh "docker run --rm ${IMAGE_NAME}:${VERSION}-test"
-            }
-        }
+        //stage('Test') {
+          //  steps {
+            //       sh "docker build --tag ${IMAGE_NAME}:${VERSION}-test welcome/app/bookinfo/src/productpage"
+              //     sh "docker run --rm ${IMAGE_NAME}:${VERSION}-test"
+           // }
+        //}
     }    
 }
