@@ -1,1 +1,30 @@
 
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME='docker-ex1-jenkins'
+        VERSION="v${env.BUILD_NUMBER}"
+        REPO='shtemeron/jenkins-project'
+        CREDENTIALS_ID='docker-credentials'
+    }
+
+    stages {
+        
+        stage('Build') {
+            steps {
+                //Build the Docker image for the build stage
+                   //sh 'pwd'
+                   //sh 'cd repo/welcome/app/bookinfo/src/productpage'
+                   sh "docker build --tag ${IMAGE_NAME}:${VERSION}-build welcome/app/bookinfo/src/productpage"
+            }
+        }
+        stage('Test') {
+            steps {
+                   sh "docker build --tag ${IMAGE_NAME}:${VERSION}-test welcome/app/bookinfo/src/productpage"
+                   sh "docker run --rm ${IMAGE_NAME}:${VERSION}-test"
+            }
+        }
+    }    
+}
+
