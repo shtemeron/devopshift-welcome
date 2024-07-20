@@ -13,12 +13,12 @@ pipeline {
         stage('Build') {
             steps {
                 //Build the Docker image for the build stage
-                   sh "docker build --tag ${IMAGE_NAME}:${VERSION}-build welcome/app/bookinfo/src/productpage"
+                   sh "docker build --target build --tag ${IMAGE_NAME}:${VERSION}-build welcome/app/bookinfo/src/productpage"
             }
         }
         stage('Test') {
             steps {
-                   sh "docker build --tag ${IMAGE_NAME}:${VERSION}-test welcome/app/bookinfo/src/productpage"
+                   sh "docker build --target test --tag ${IMAGE_NAME}:${VERSION}-test welcome/app/bookinfo/src/productpage"
                    sh "docker run --rm ${IMAGE_NAME}:${VERSION}-test"
             }
         }
