@@ -12,8 +12,8 @@ pipeline {
         
         stage('Lint/Test') {
             steps {
-                   sh "docker build --target lint-test --tag ${IMAGE_NAME}:${VERSION}-lint-test welcome/app/bookinfo/src/ratings"
-                   sh "docker run --rm ${IMAGE_NAME}:${VERSION}-lint-test
+                   sh "docker build --target lint-test --tag ${IMAGE_NAME}:${VERSION} welcome/app/bookinfo/src/ratings"
+                   sh "docker run --rm ${IMAGE_NAME}:${VERSION}
             }
         }
         stage('Run') {
