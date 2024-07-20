@@ -7,7 +7,7 @@ pipeline {
         REPO='shtemeron/docker-ex3-jenkins'
         CREDENTIALS_ID='docker-credentials'
       // i installed snyk security plugin in jenkins for the token
-        SNYK_TOKEN='snyk_token-api'
+        SNYK_TOKEN='snyk-token-api'
     }
 
     stages {
