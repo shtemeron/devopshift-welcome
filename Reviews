@@ -25,7 +25,6 @@ pipeline {
         stage('Run') {
             steps {
                    sh "docker build --tag ${IMAGE_NAME}:${VERSION}-run welcome/app/bookinfo/src/reviews"
-                  // sh "docker run --rm ${IMAGE_NAME}:${VERSION}-run"
             }
         }
         stage('Push') {
