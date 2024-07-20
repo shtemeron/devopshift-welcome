@@ -6,7 +6,7 @@ pipeline {
         VERSION="v${env.BUILD_NUMBER}"
         REPO='shtemeron/docker-ex3-jenkins'
         CREDENTIALS_ID='docker-credentials'
-        SNYK_TOKEN='synk_token'
+        SNYK_TOKEN='snyk_token'
     }
 
     stages {
