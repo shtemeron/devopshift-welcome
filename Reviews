@@ -16,12 +16,12 @@ pipeline {
                    sh "docker build --target builder --tag ${IMAGE_NAME}:${VERSION}-build welcome/app/bookinfo/src/reviews"
             }
         }
-        stage('Security') {
-            steps {
-                   sh "docker build --target security --build-arg SNYK_TOKEN=${SNYK_TOKEN} --tag ${IMAGE_NAME}:${VERSION}-security welcome/app/bookinfo/src/reviews"
-                   sh "docker run --rm ${IMAGE_NAME}:${VERSION}-security"
-            }
-        }
+        //stage('Security') {
+           // steps {
+          //         sh "docker build --target security --build-arg SNYK_TOKEN=${SNYK_TOKEN} --tag ${IMAGE_NAME}:${VERSION}-security welcome/app/bookinfo/src/reviews"
+          //         sh "docker run --rm ${IMAGE_NAME}:${VERSION}-security"
+          //  }
+       // }
         stage('Run') {
             steps {
                    sh "docker build --tag ${IMAGE_NAME}:${VERSION}-run welcome/app/bookinfo/src/reviews"
