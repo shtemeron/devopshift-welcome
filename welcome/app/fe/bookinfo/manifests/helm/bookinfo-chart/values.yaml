@@ -12,6 +12,7 @@ ratings:
 
 reviews:
   image: docker.io/istio/examples-bookinfo-reviews-v1
+  replicaCount: 2
 
 productpage:
   image: docker.io/istio/examples-bookinfo-productpage-v1
